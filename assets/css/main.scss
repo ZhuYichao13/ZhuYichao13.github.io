@@ -298,6 +298,7 @@ button:focus-visible {
   position: absolute;
   top: 50%;
   right: 1rem;
+  z-index: 11;
   display: grid;
   width: 2.35rem;
   height: 2.35rem;
@@ -446,6 +447,15 @@ html[data-theme="dark"] .theme-toggle span::before {
 }
 
 .author__email {
+  display: grid !important;
+  grid-template-columns: 1rem minmax(0, 1fr);
+  gap: 0.35rem;
+  align-items: start;
+  white-space: normal;
+}
+
+.author__email span {
+  min-width: 0;
   overflow-wrap: anywhere;
 }
 
