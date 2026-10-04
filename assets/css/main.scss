@@ -445,6 +445,10 @@ html[data-theme="dark"] .theme-toggle span::before {
   color: var(--blue);
 }
 
+.author__email {
+  overflow-wrap: anywhere;
+}
+
 .page,
 .page .page__inner-wrap,
 .page__content {
@@ -458,7 +462,7 @@ html[data-theme="dark"] .theme-toggle span::before {
 
 .hero {
   position: relative;
-  min-height: 320px;
+  min-height: 0;
   padding: 2rem 0 3.8rem;
 }
 
@@ -879,13 +883,18 @@ html[data-theme="dark"] .hero::after {
   width: 3.4rem;
   height: 3.4rem;
   flex: 0 0 auto;
-  color: var(--button-ink);
   border-radius: 1rem;
-  background: linear-gradient(135deg, var(--blue), var(--accent-end));
+  background: #fff;
   box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2);
   place-items: center;
-  font-size: 1.25rem;
-  font-weight: 800;
+  overflow: hidden;
+}
+
+.feature-card__mark img {
+  width: 2.9rem;
+  height: 2.9rem;
+  margin: 0;
+  object-fit: contain;
 }
 
 .feature-card h3 {
@@ -894,7 +903,7 @@ html[data-theme="dark"] .hero::after {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.85rem;
 }
 

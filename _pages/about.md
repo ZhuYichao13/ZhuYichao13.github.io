@@ -30,10 +30,6 @@ redirect_from:
 <section class="hero" id="about-me">
   <h1>Hi, I'm Yichao Zhu.</h1>
   <p class="hero__intro">I'm a first-year master's student at the <a href="https://sist.shanghaitech.edu.cn/">School of Information Science and Technology</a>, ShanghaiTech University, supervised by Prof. <a href="https://faculty.sist.shanghaitech.edu.cn/liquan/">Quan Li</a>. My research interests include human-computer interaction and data visualization, with a recent focus on their applications in healthcare.</p>
-  <div class="hero__actions">
-    <a class="btn btn--primary" href="#publications" target="_self">Explore my work <span aria-hidden="true">↗</span></a>
-    <a class="btn btn--ghost" href="mailto:zhuych12022@shanghaitech.edu.cn">Let's connect <span aria-hidden="true">→</span></a>
-  </div>
 </section>
 
 <section class="profile-section" id="publications">
@@ -88,11 +84,11 @@ redirect_from:
   </div>
   <div class="education-list">
     <article class="feature-card">
-      <div class="feature-card__mark">M</div>
+      <div class="feature-card__mark"><img src="{{ '/images/education-master.png' | relative_url }}" alt="" aria-hidden="true"></div>
       <div><time>2026 — Present</time><h3>ShanghaiTech University</h3><p>Master's Student · School of Information Science and Technology · Shanghai</p></div>
     </article>
     <article class="feature-card">
-      <div class="feature-card__mark">B</div>
+      <div class="feature-card__mark"><img src="{{ '/images/education-bachelor.png' | relative_url }}" alt="" aria-hidden="true"></div>
       <div><time>2022 — 2026</time><h3>ShanghaiTech University</h3><p>Bachelor's Degree · School of Information Science and Technology · Shanghai</p></div>
     </article>
   </div>
@@ -104,7 +100,8 @@ redirect_from:
     <div><h2>Service</h2></div>
   </div>
   <div class="service-grid">
-    <article class="service-card"><time>2025.03 — 2025.07</time><h3>Teaching Assistant</h3><p>CS182 · Introduction to Machine Learning</p></article>
+    <article class="service-card"><time>Fall 2027</time><h3>Teaching Assistant</h3><p>ART 1422 · Data Visualization</p></article>
+    <article class="service-card"><time>Spring 2026</time><h3>Teaching Assistant</h3><p>SI100B · Introduction to Information Science and Technology</p></article>
     <article class="service-card"><time>2024.09 — 2025.09</time><h3>President</h3><p>ShanghaiTech Music Club</p></article>
     <article class="service-card"><time>2023.09 — 2025.09</time><h3>Student Assistant</h3><p>Mind and Health Center</p></article>
   </div>
