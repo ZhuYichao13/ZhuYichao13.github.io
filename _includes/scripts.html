@@ -1,4 +1,24 @@
 <script src="assets/js/main.min.js"></script>
 
+<script>
+  (function () {
+    var toggle = document.querySelector('.theme-toggle');
+    if (!toggle) return;
+
+    function update(theme) {
+      document.documentElement.dataset.theme = theme;
+      toggle.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' theme');
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', theme === 'dark' ? '#090909' : '#f4f5f3');
+    }
+
+    update(document.documentElement.dataset.theme);
+    toggle.addEventListener('click', function () {
+      var theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      update(theme);
+      try { localStorage.setItem('theme', theme); } catch (error) {}
+    });
+  }());
+</script>
+
 {% include analytics.html %}
 {% include fetch_google_scholar_stats.html %}
