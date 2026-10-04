@@ -476,6 +476,14 @@ html[data-theme="dark"] .theme-toggle span::before {
   padding: 2rem 0 3.8rem;
 }
 
+.page__content #about-me {
+  margin-top: 0;
+}
+
+.page__content #about-me::before {
+  display: none;
+}
+
 .hero::before {
   position: absolute;
   top: 1.25rem;
@@ -1001,6 +1009,64 @@ html[data-theme="dark"] .hero::after {
   }
 }
 
+@media (max-width: 924px) {
+  #main {
+    display: block;
+    padding: clamp(1.25rem, 4vw, 2.5rem) clamp(0.85rem, 4vw, 1.5rem) 4rem;
+  }
+
+  .sidebar,
+  .page {
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sidebar {
+    margin-bottom: 1.5rem;
+  }
+
+  .profile_box {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .author__content {
+    min-width: 0;
+    padding-left: 0;
+  }
+
+  .author__urls-wrapper {
+    display: block;
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .author__urls_sm {
+    display: flex;
+    gap: 0.65rem;
+    padding: 0;
+  }
+
+  .author__urls_sm a {
+    display: grid;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--ink);
+    border-radius: 0.75rem;
+    background: var(--accent-soft);
+    place-items: center;
+  }
+
+  .hero {
+    padding-top: 1.25rem;
+  }
+}
+
 @media (max-width: 767px) {
   .masthead__inner-wrap {
     padding: 0.6rem 1rem;
@@ -1027,22 +1093,9 @@ html[data-theme="dark"] .hero::after {
     padding-top: 2rem;
   }
 
-  .profile_box {
-    flex-wrap: wrap;
-  }
-
-  .author__urls-wrapper {
-    width: 100%;
-  }
-
-  .author__urls_sm {
-    padding: 0.65rem 0 0;
-    font-size: 1.2rem;
-  }
-
   .hero {
     min-height: 0;
-    padding: 3.25rem 0 2.5rem;
+    padding: 1rem 0 2.5rem;
   }
 
   .hero::after {
@@ -1066,6 +1119,19 @@ html[data-theme="dark"] .hero::after {
     grid-template-columns: 1fr;
   }
 
+  .publication-card {
+    padding: 1.1rem;
+  }
+
+  .publication-card__footer span {
+    max-width: 100%;
+  }
+
+  .feature-card {
+    gap: 0.9rem;
+    padding: 1.1rem;
+  }
+
   .timeline__item {
     grid-template-columns: 1fr;
     gap: 0.55rem;
@@ -1073,6 +1139,31 @@ html[data-theme="dark"] .hero::after {
 
   .service-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .greedy-nav a {
+    margin: 0 0.4rem;
+    font-size: 0.78rem;
+  }
+
+  .profile_box {
+    grid-template-columns: 64px minmax(0, 1fr);
+    padding: 0.9rem;
+  }
+
+  .author__avatar,
+  .author__avatar img {
+    width: 64px;
+  }
+
+  .page__content .hero h1 {
+    font-size: 2rem;
+  }
+
+  .section-heading {
+    gap: 0.75rem;
   }
 }
 
